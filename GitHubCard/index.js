@@ -82,7 +82,22 @@ function createCard(data){
   cardInfo.classList.add('card-info')
   realName.classList.add('name')
   userName.classList.add('username')
-  
+
+  //Setting up the content to elements
+
+  img.src = data.avatar_url
+  realName.textContent = data.name
+  userName.textContent = data.login
+  location.textContent = `Location: ${data.location}`
+  userLink.href = data.html_url
+  userLink.textContent = data.html_url
+  profile.textContent = `Profile: ${userLink}`
+  followers.textContent = `Followers: ${data.followers}`
+  following.textContent = `Following: ${data.following}`
+  bio.textContent = `Bio: ${data.bio}`
+
+  return card
+
 }
 
 /* List of LS Instructors Github username's: 
