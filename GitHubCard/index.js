@@ -49,7 +49,7 @@ const followersArray = [];
 function createCard(data){
 
   //DOM Elements
-  const cards = document.querySelector('cards')
+  //const cards = document.querySelector('cards')
   
   const card = document.createElement('div')
   const img = document.createElement('img')
@@ -64,7 +64,7 @@ function createCard(data){
   const bio = document.createElement('p')
 
   //Setting up DOM structure to HTML
-  cards.appendChild(card)
+  //cards.appendChild(card)
   card.appendChild(img)
   card.appendChild(cardInfo)
   cardInfo.appendChild(realName)
@@ -76,9 +76,13 @@ function createCard(data){
   cardInfo.appendChild(following)
   cardInfo.appendChild(bio)
 
+  //Setting up class names for DOM elements
 
-
-
+  card.classList.add('card')
+  cardInfo.classList.add('card-info')
+  realName.classList.add('name')
+  userName.classList.add('username')
+  
 }
 
 /* List of LS Instructors Github username's: 
