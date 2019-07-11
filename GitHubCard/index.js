@@ -84,7 +84,7 @@ function createCard(data){
   cardInfo.appendChild(userName)
   cardInfo.appendChild(location)
   cardInfo.appendChild(profile)
-  profile.appendChild(userLink)
+  
   cardInfo.appendChild(followers)
   cardInfo.appendChild(following)
   cardInfo.appendChild(bio)
@@ -104,7 +104,8 @@ function createCard(data){
   location.textContent = `Location: ${data.location}`
   userLink.href = data.html_url
   userLink.textContent = data.html_url
-  profile.textContent = `Profile: ${userLink}`
+  profile.textContent = `Profile: `
+  profile.appendChild(userLink)
   followers.textContent = `Followers: ${data.followers}`
   following.textContent = `Following: ${data.following}`
   bio.textContent = `Bio: ${data.bio}`
