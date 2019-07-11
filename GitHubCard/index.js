@@ -63,6 +63,18 @@ function createCard(data){
   const following = document.createElement('p')
   const bio = document.createElement('p')
 
+  //Setting up DOM structure to HTML
+  cards.appendChild(card)
+  card.appendChild(img)
+  card.appendChild(cardInfo)
+  cardInfo.appendChild(realName)
+  cardInfo.appendChild(userName)
+  cardInfo.appendChild(location)
+  cardInfo.appendChild(profile)
+  profile.appendChild(userLink)
+  cardInfo.appendChild(followers)
+  cardInfo.appendChild(following)
+  cardInfo.appendChild(bio)
 
 
 
