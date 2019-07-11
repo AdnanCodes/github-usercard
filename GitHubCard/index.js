@@ -2,6 +2,9 @@
            (replacing the palceholder with your Github name):
            https://api.github.com/users/<your name>
 */
+
+const cards = document.querySelector('.cards')
+
 axios.get(`https://api.github.com/users/AdnanWebDev`)
 /* Step 2: Inspect and study the data coming back, this is YOUR 
    github info! You will need to understand the structure of this 
@@ -13,7 +16,14 @@ axios.get(`https://api.github.com/users/AdnanWebDev`)
 /* Step 4: Pass the data received from Github into your function, 
            create a new component and add it to the DOM as a child of .cards
 */
-
+.then(data => {
+  console.log('Cool stuff here', data)
+  const mycard = createCard(data.data)
+  cards.appendChild(mycard)
+})
+.catch(error => {
+  console.log('API is currently down', error)
+})
 
 /* Step 5: Now that you have your own card getting added to the DOM, either 
           follow this link in your browser https://api.github.com/users/<Your github name>/followers 
